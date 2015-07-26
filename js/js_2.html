@@ -25,6 +25,8 @@
         
     
     
+    <link rel="next" href="../css/index.html" />
+    
     
     <link rel="prev" href="../js/js_1.html" />
     
@@ -34,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-basepath=".." data-revision="Sun Jul 26 2015 10:12:33 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Sun Jul 26 2015 12:00:43 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -104,6 +106,42 @@
                             <b>1.2.</b>
                         
                         Promise对象学习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="css/index.html">
+            
+                
+                    <a href="../css/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        css
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="css/css_1.html">
+            
+                
+                    <a href="../css/css_1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        css布局思考与总结
                     </a>
                 
             
@@ -221,12 +259,12 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="promise%E5%AF%B9%E8%B1%A1">Promise&#x5BF9;&#x8C61;</h1>
-<p><strong>&#x6784;&#x9020;&#x51FD;&#x6570;</strong></p>
+<h2 id="-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><strong>&#x6784;&#x9020;&#x51FD;&#x6570;</strong></h2>
 <pre><code>var promise = new Promise(function(resolve, reject) {
  // &#x5F02;&#x6B65;&#x5904;&#x7406; 
 // &#x5904;&#x7406;&#x7ED3;&#x675F;&#x540E;&#x3001;&#x8C03;&#x7528;resolve &#x6216; reject
  });
-</code></pre><p><strong>&#x7528;&#x6CD5;&#xFF1A;</strong></p>
+</code></pre><h2 id="%E7%94%A8%E6%B3%95%EF%BC%9A">&#x7528;&#x6CD5;&#xFF1A;</h2>
 <pre><code>
 Function getPromise(){
     return new Promise(function(resolve,reject){
@@ -246,33 +284,29 @@ getPromise().then(function(value){
 }).catch(function(error){
 })
 </code></pre><blockquote>
-<p>1&#x548C;2&#x7684;&#x5199;&#x6CD5;&#x7B49;&#x4EF7;&#x3002;&#x4F46;2&#x7684;&#x5199;&#x6CD5;&#x66F4;&#x6E05;&#x695A;&#x4E00;&#x4E9B;&#x3002;
+<p><strong>1&#x548C;2&#x7684;&#x5199;&#x6CD5;&#x7B49;&#x4EF7;&#x3002;&#x4F46;2&#x7684;&#x5199;&#x6CD5;&#x66F4;&#x6E05;&#x695A;&#x4E00;&#x4E9B;&#x3002;</strong>
 &#x5F53;getPromise()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x4E3A;resolve&#x7684;promise&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4F1A;&#x6267;&#x884C;then&#xFF08;&#xFF09;&#x4E2D;&#x7684;onfullfilled&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x662F;reject &#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;onRecjected &#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x662F;catch&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;&#xFF09;
 2&#x5199;&#x6CD5;&#x7684;&#x6709;&#x4E00;&#x70B9;&#x597D;&#x5904;&#x662F;&#xFF0C;then() &#x6267;&#x884C;&#x8FC7;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;promise &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5982;&#x679C;then&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x629B;&#x51FA;error&#x9519;&#x8BEF;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5230;&#x540E;&#x9762;&#x7684;catch&#xFF08;&#xFF09;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;
 &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;catch&#xFF08;&#xFF09;&#x53EF;&#x4EE5;&#x51FA;&#x6765;&#x6765;&#x81EA;getPromise&#xFF08;&#xFF09;&#x6216;&#x8005;then&#xFF08;&#xFF09;&#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x7684;&#x51FA;&#x9519;&#x4FE1;&#x606F;&#x3002;</p>
 </blockquote>
 <p> <strong>Promise.resolve(value)</strong></p>
-<blockquote>
-<p>&#x76F8;&#x5F53;&#x4E8E;
-new Promise(function(resolve){
+<p>&#x76F8;&#x5F53;&#x4E8E;</p>
+<pre><code>new Promise(function(resolve){
     resolve(&#x2018;promise&#x2019;);
 })
-&#x7528;&#x6CD5;&#xFF1A;
-Promise.resolve(42).then(function(value){
+</code></pre><p>&#x7528;&#x6CD5;&#xFF1A;</p>
+<pre><code>Promise.resolve(42).then(function(value){
     console.log(value);       //--&gt; 42
-})</p>
-</blockquote>
-<p>&#x8BA9;promise&#x5BF9;&#x8C61;&#x7ACB;&#x5373;&#x8FDB;&#x5165;resolve&#x72B6;&#x6001;&#x6267;&#x884C;then&#xFF08;&#xFF09;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;resolve&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;then&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
-<p>&#x53E6;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;&#x5C06;thenable&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;promise&#x5BF9;&#x8C61;
-Thenable &#x662F;&#x6307;&#x5177;&#x6709;then&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5411;&#x6709;length&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#x3002;
-jQuery.ajax()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;jqXHR Object&#x5BF9;&#x8C61;&#xFF0C;&#x6709;then&#x65B9;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#x4ED6;&#x6CA1;&#x6709;catch&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#xFF0C;&#x8F6C;&#x6362;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;es 6 &#x4E2D;promise&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x4E86;&#x3002;</p>
-<blockquote>
-<p>var promise = Promise.resolve($.ajax(&apos;/json/comment.json&apos;));// --&gt;
-promise&#x5BF9;&#x8C61;
- promise.then(function(value){    console.log(value); });</p>
-</blockquote>
-<p>Promise.resolve(value) &#x540C;&#x6B65;&#xFF1F;
-&#x4EE5;&#x4E3A;promise&#x7ACB;&#x5373;&#x8FDB;&#x5165;resolve&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7ED9;&#x4EBA;&#x540C;&#x6B65;&#x7684;&#x611F;&#x89C9;&#xFF0C;&#x4F46;&#x662F;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x8FD8;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#x540C;&#x6B65;&#x540C;&#x65F6;&#x5B58;&#x5728;&#x4F1A;&#x4EA7;&#x751F;&#x5904;&#x7406;&#x6DF7;&#x4E71;&#xFF0C;&#x6240;&#x4EE5;&#x540C;&#x610F;&#x91C7;&#x7528;&#x5F02;&#x6B65;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+})
+</code></pre><p>&#x8BA9;promise&#x5BF9;&#x8C61;&#x7ACB;&#x5373;&#x8FDB;&#x5165;resolve&#x72B6;&#x6001;&#x6267;&#x884C;then&#xFF08;&#xFF09;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;resolve&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;then&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p><strong>&#x53E6;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;</strong>
+    &#x5C06;thenable&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;promise&#x5BF9;&#x8C61;
+<code>henable</code> &#x662F;&#x6307;&#x5177;&#x6709;<code>then()</code>&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5411;&#x6709;length&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#x3002;
+jQuery.ajax()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>jqXHR Object</code>&#x5BF9;&#x8C61;&#xFF0C;&#x6709;<code>then()</code>&#x3002;&#x4F46;&#x662F;&#x4ED6;&#x6CA1;&#x6709;<code>catch()</code>&#x8F6C;&#x6362;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;es 6 &#x4E2D;promise&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x4E86;&#x3002;</p>
+<pre><code> var promise = Promise.resolve($.ajax(&apos;/json/comment.json&apos;));// --&gt;promise&#x5BF9;&#x8C61;  
+ promise.then(function(value){    console.log(value); });
+</code></pre><h4 id="promise-resolve-value-%E5%90%8C%E6%AD%A5%EF%BC%9F">Promise.resolve(value) &#x540C;&#x6B65;&#xFF1F;</h4>
+<p>&#x4EE5;&#x4E3A;promise&#x7ACB;&#x5373;&#x8FDB;&#x5165;resolve&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7ED9;&#x4EBA;&#x540C;&#x6B65;&#x7684;&#x611F;&#x89C9;&#xFF0C;&#x4F46;&#x662F;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x8FD8;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x5F02;&#x6B65;&#x540C;&#x6B65;&#x540C;&#x65F6;&#x5B58;&#x5728;&#x4F1A;&#x4EA7;&#x751F;&#x5904;&#x7406;&#x6DF7;&#x4E71;&#xFF0C;&#x6240;&#x4EE5;&#x540C;&#x610F;&#x91C7;&#x7528;&#x5F02;&#x6B65;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
 <p><strong>Promise chain</strong></p>
 <p>Promise&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x3002;</p>
 <pre><code>var promise = Promise.resolve(1);
@@ -282,8 +316,51 @@ promise
 .catch(fun3)
 .then(fun4)
 </code></pre><p>&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;then&#xFF08;&#xFF09;&#x4E0D;&#x4EC5;&#x662F;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x90A3;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x4ED6;c&#x521B;&#x5EFA;&#x5E76;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;promise&#x5BF9;&#x8C61;&#x4F20;&#x9012;&#x7ED9;&#x540E;&#x9762;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x8BF4;&#xFF0C;&#x5F53;&#x67D0;&#x4E00;&#x4E2A;then&#xFF08;&#xFF09;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x629B;&#x51FA;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x4F1A;&#x8DF3;&#x5230;catch&#xFF08;&#xFF09;&#x3002;&#x4F46;&#x662F;catch&#xFF08;&#xFF09;&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x8FD8;&#x6709;fun4&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x662F;&#x6CA1;&#x529E;&#x6CD5;&#x88AB;&#x6355;&#x83B7;&#x7684;&#x3002;&#x6240;&#x4EE5;catch&#xFF08;&#xFF09;&#x653E;&#x5728;&#x6700;&#x540E;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x5E76;&#x4E14;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x53EA;&#x505A;&#x5F02;&#x5E38;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x4E0D;&#x8981;&#x505A;&#x522B;&#x7684;&#x6BD4;&#x8F83;&#x597D;&#x3002;</p>
-<p>Promise &#x548C;deferred&#x7684;&#x533A;&#x522B;
-Promise&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#x73B0;&#x5728;&#x8FD8;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;&#x672A;&#x6765;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x5B83;&#x7684;&#x72B6;&#x6001;&#x8981;&#x4E48;&#x53D8;&#x4E3A;&#x6B63;&#x5E38;&#x503C;&#xFF08;FulFilled&#xFF09;&#xFF0C;&#x8981;&#x4E48;&#x53D8;&#x4E3A;&#x5F02;&#x5E38;&#x503C;&#xFF08;Rejected&#xFF09;&#xFF1B;&#x800C;Deferred&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x4E86;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8FD8;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#x7684;&#x8FD9;&#x79CD;&#x4E8B;&#x5B9E;&#xFF0C;&#x5728;&#x5B83;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Promise&#x6765;&#x53D6;&#x5F97;&#x5904;&#x7406;&#x7ED3;&#x679C;</p>
+<h2 id="promise-%E5%92%8Cdeferred%E7%9A%84%E5%8C%BA%E5%88%AB">Promise &#x548C;deferred&#x7684;&#x533A;&#x522B;</h2>
+<p>Defdrred&#x5305;&#x542B;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x5177;&#x6709;&#x64CD;&#x4F5C;promise&#x5BF9;&#x8C61;&#x7684;&#x7279;&#x6743;&#x65B9;&#x6CD5;</p>
+<pre><code>function Deferred() {
+    this.promise = new Promise(function (resolve, reject) {
+        this._resolve = resolve;
+        this._reject = reject;
+    }.bind(this));
+}
+Deferred.prototype.resolve = function (value) {
+    this._resolve.call(this.promise, value);
+};
+Deferred.prototype.reject = function (reason) {
+    this._reject.call(this.promise, reason);
+};
+function getURL(URL) {
+    var deferred = new Deferred();
+    var req = new XMLHttpRequest();
+    req.open(&apos;GET&apos;, URL, true);
+    req.onload = function () {
+        if (req.status === 200) {
+            deferred.resolve(req.responseText);
+        } else {
+            deferred.reject(new Error(req.statusText));
+        }
+    };
+    req.onerror = function () {
+        deferred.reject(new Error(req.statusText));
+    };
+    req.send();
+    return deferred.promise;
+}
+// &#x8FD0;&#x884C;&#x793A;&#x4F8B;
+var URL = &quot;http://httpbin.org/get&quot;;
+getURL(URL).then(function onFulfilled(value){
+    console.log(value);
+}).catch(console.error.bind(console));
+</code></pre><p><strong>deferred &#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x6539;&#x53D8;promise&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x800C;promise&#x5BF9;&#x8C61;&#x53EA;&#x80FD;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x8C03;&#x7528;<code>resolve&#xFF08;&#xFF09;</code>,&#x76F8;&#x5BF9;&#x7075;&#x6D3B;&#x4E86;&#x5F88;&#x591A;&#x3002;</strong></p>
+<blockquote>
+<p>Promise&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x72B6;&#x6001;&#x73B0;&#x5728;&#x8FD8;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;&#x672A;&#x6765;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x5B83;&#x7684;&#x72B6;&#x6001;&#x8981;&#x4E48;&#x53D8;&#x4E3A;&#x6B63;&#x5E38;&#x503C;&#xFF08;FulFilled&#xFF09;&#xFF0C;&#x8981;&#x4E48;&#x53D8;&#x4E3A;&#x5F02;&#x5E38;&#x503C;&#xFF08;Rejected&#xFF09;&#xFF1B;&#x800C;Deferred&#x5BF9;&#x8C61;&#x8868;&#x793A;&#x4E86;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8FD8;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#x7684;&#x8FD9;&#x79CD;&#x4E8B;&#x5B9E;&#xFF0C;&#x5728;&#x5B83;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Promise&#x6765;&#x53D6;&#x5F97;&#x5904;&#x7406;&#x7ED3;&#x679C;.</p>
+<h2 id="promise%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84">Promise&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</h2>
+<p><code>Promise.all()</code>
+&#x5F53;promise&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x7684;promise&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x5168;&#x90E8;&#x53D8;&#x4E3A;resolve&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x624D;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;.then() &#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;
+<code>Promise.race()</code>
+&#x5F53;promise&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x7684;promise&#x5BF9;&#x8C61;&#x72B6;&#x6001;&#x6709;&#x4E00;&#x4E2A;&#x53D8;&#x4E3A;resolve&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;.then() &#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#x3002;&#x5E76;&#x4E14;&#x6570;&#x7EC4;&#x4E2D;&#x8FD8;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x5B8C;&#x7684;promise&#x5BF9;&#x8C61;&#x4F1A;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;</p>
+</blockquote>
 
                     
                     </section>
@@ -294,8 +371,10 @@ Promise&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&
         </div>
 
         
-        <a href="../js/js_1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: js代码组织思考"><i class="fa fa-angle-left"></i></a>
+        <a href="../js/js_1.html" class="navigation navigation-prev " aria-label="Previous page: js代码组织思考"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../css/index.html" class="navigation navigation-next " aria-label="Next page: css"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
