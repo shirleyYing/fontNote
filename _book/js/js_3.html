@@ -1,0 +1,566 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>lofty组件用法整理 | 前端笔记</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../css/index.html" />
+    
+    
+    <link rel="prev" href="../js/js_2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3" data-basepath=".." data-revision="Mon Aug 17 2015 11:22:02 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="js/index.html">
+            
+                
+                    <a href="../js/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        js
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="js/js_1.html">
+            
+                
+                    <a href="../js/js_1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        js代码组织思考
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="js/js_2.html">
+            
+                
+                    <a href="../js/js_2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Promise对象学习
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="js/js_3.html">
+            
+                
+                    <a href="../js/js_3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        lofty组件用法整理
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="css/index.html">
+            
+                
+                    <a href="../css/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        css
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="css/css_1.html">
+            
+                
+                    <a href="../css/css_1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        css布局思考与总结
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="css/css_2.html">
+            
+                
+                    <a href="../css/css_2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        web高性能动画与页面渲染
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="node/index.html">
+            
+                
+                    <a href="../node/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        node
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="node/http_spider.html">
+            
+                
+                    <a href="../node/http_spider.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        网络爬虫小例子
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="tools/index.html">
+            
+                
+                    <a href="../tools/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        工具类文档
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="tools/tools_3.html">
+            
+                
+                    <a href="../tools/tools_3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        搭建公共头尾方法
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="tools/tools_1.html">
+            
+                
+                    <a href="../tools/tools_1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        前端ps工具使用技巧
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="tools/tools_2.html">
+            
+                
+                    <a href="../tools/tools_2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        sublime3+livereload+chrome插件安装
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前端笔记</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="lofty%E7%BB%84%E4%BB%B6%E7%94%A8%E6%B3%95%E6%95%B4%E7%90%86">lofty&#x7EC4;&#x4EF6;&#x7528;&#x6CD5;&#x6574;&#x7406;</h1>
+<p>&#x521A;&#x521A;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x8F6E;&#x64AD;&#x7EC4;&#x4EF6;&#x3002;&#x548C;&#x4F20;&#x7EDF;&#x7684;&#x89E6;&#x70B9;&#x548C;&#x8F6E;&#x64AD;&#x7EC4;&#x4EF6;&#x5206;&#x522B;&#x5728;&#x4E24;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6837;&#x5F0F;&#x6709;&#x4E9B;&#x4E0D;&#x540C;&#x3002;
+&#x53D1;&#x73B0;&#x9ED8;&#x8BA4;&#x7684;&#x5207;&#x6362;&#x6837;&#x5F0F;&#x4F1A;&#x5C06;&#x5176;&#x4ED6;&#x6CA1;&#x663E;&#x793A;&#x7684;&#x8F6E;&#x64AD;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;&#xFF1A;display&#xFF1A;none&#xFF1B;&#x81EA;&#x5DF1;&#x505A;&#x4E86;hack&#x3002;&#x663E;&#x793A;&#x6B63;&#x5E38;&#x4E86;&#x4F46;&#x662F;&#x53D1;&#x73B0;&#x89E6;&#x70B9; hover&#x4E8B;&#x4EF6;&#x4E0D;&#x7BA1;&#x7528;&#x4E86;&#x3002;&#x4E8E;&#x662F;&#x53BB;&#x6E90;&#x7801;&#x4E2D;&#x627E;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x53D1;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#x6240;&#x5728;&#xFF0C;&#x4E5F;&#x719F;&#x6089;&#x4E86;&#x4E00;&#x4E0B;tab&#x7EC4;&#x4EF6;&#x7684;&#x7528;&#x6CD5;&#x3002;
+&#x7EC4;&#x4EF6;&#x5730;&#x5740;&#xFF1A;<a href="http://cms.cn.alibaba-inc.com/page/box/view.html?id=7272&amp;type=module" target="_blank">http://cms.cn.alibaba-inc.com/page/box/view.html?id=7272&amp;type=module</a>)</p>
+<pre><code>define([&apos;fui/tabs/2.0&apos;,&apos;jquery&apos;], function(Tabs,$){
+        var $el=$(&apos;.korea-imgtab&apos;);
+        var $li=$el.find(&apos;.img-list li&apos;);
+        var $dot=$el.find(&apos;.main&apos;);
+        var tab = new Tabs({
+            tpl:$el,
+            boxSelector: $li,
+            titleSelector:$dot,
+            currentCls:&quot;cur&quot;,
+            autoPlay:&apos;line&apos;,
+            listenDefault:true,
+            interval:2000
+        });
+});
+</code></pre><p>&#x4F20;jquery&#x5BF9;&#x8C61;&#x662F;&#x51FA;&#x4E8E;&#x907F;&#x514D;&#x547D;&#x540D;&#x51B2;&#x7A81;&#x7684;&#x8003;&#x8651;&#x3002;&#x4F46;&#x662F;&#x5FD8;&#x8BB0;&#x4E86;&#x6587;&#x6863;&#x4E2D;&#x89C4;&#x5B9A;&#x4E86;&#x53EA;&#x80FD;&#x4F20;&#x9012;string&#xFF0C;&#x4E5F;&#x5C31;&#x662F;selector&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x53EA;&#x662F;&#x89E6;&#x70B9;hover&#x6548;&#x679C;&#x5931;&#x6548;&#x4E86;&#x3002;&#x9ED8;&#x8BA4;&#x89E6;&#x70B9;&#x4E8B;&#x4EF6;&#x4E3A;<code>onmouseenter</code>. &#x6548;&#x679C;&#x4E3A;&#x6682;&#x505C;&#x8F6E;&#x64AD;&#x3002;&#x53BB;&#x6E90;&#x7801;&#x4E2D;&#x627E;&#x5230;&#x4E86;&#x7B54;&#x6848;&#x3002;</p>
+<p>Tab&#x7EC4;&#x4EF6;&#x7EE7;&#x627F;&#x81EA;Widget&#x7EC4;&#x4EF6;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x7531;widget&#x5B8C;&#x6210;&#xFF0C;</p>
+<pre><code>init: function( config) {
+
+                //&#x521D;&#x59CB;&#x5316;options
+                this.mixOptions([&apos;tpl&apos;, &apos;events&apos;]);
+
+                //&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5C5E;&#x6027;&#x53CA;plugin&#x7B49;
+                Base.prototype.init.call(this, config || {});
+
+                //&#x5224;&#x65AD;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x65B9;&#x5F0F;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x7EC4;&#x4EF6;&#x6839;&#x8282;&#x70B9;
+                this.buildElement();
+
+                //&#x521D;&#x59CB;&#x5316;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;
+                this.bindEvent();
+
+                //&#x5B50;&#x7C7B;&#x7EC4;&#x4EF6;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;
+                this._create();
+            },
+</code></pre><p><code>buildElement()</code> &#x4E2D;&#x4F1A;&#x5F97;&#x5230;&#x6A21;&#x677F;&#x8282;&#x70B9;
+&#x5728; buildElement() &#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x5B9E;&#x4F8B;&#x5316;&#x7EC4;&#x4EF6;&#x65F6;&#x4F20;&#x5165;&#x7684; tpl &#x53C2;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code>if (isString(tpl)) {
+    // &#x7EC4;&#x4EF6;&#x7684;Dom&#x8282;&#x70B9;&#x5B58;&#x5728;&#x4E8E;&#x9875;&#x9762;&#x4E0A;
+    if (tpl.charAt(0) === &apos;.&apos; || tpl.charAt(0) === &apos;#&apos; || tpl === &apos;body&apos;) {
+        node = $(tpl);
+    }
+}else{
+    node = tpl;
+}
+</code></pre><p>&#x56E0;&#x4E3A;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x517C;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x4F20;&#x4E86;jquery&#x5BF9;&#x8C61;&#x4E5F;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#x3002;
+&#x65E0;&#x8BBA;&#x6E32;&#x67D3;&#x65B9;&#x5F0F;&#x5982;&#x4F55;&#xFF0C;buildElement()&#x6700;&#x7EC8;&#x4F1A;&#x6784;&#x5EFA;&#x5F97;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x6839;&#x8282;&#x70B9;&#x5BF9;&#x8C61; --&gt; this.get(&apos;el&apos;)&#xFF0C;init &#x51FD;&#x6570;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C; &#x901A;&#x8FC7; bindEvent &#x51FD;&#x6570;&#x5C06;&#x5B9A;&#x4E49;&#x5728; UI &#x57FA;&#x7C7B; events &#x5BF9;&#x8C61;&#x4E2D;&#x7684; &#x8282;&#x70B9;&#x9009;&#x62E9;&#x5668; + &#x4E8B;&#x4EF6; + callback &#x4EE5;&#x4E8B;&#x4EF6;<strong>&#x59D4;&#x6258;&#x7684;&#x65B9;&#x5F0F;</strong>&#x81EA;&#x52A8;&#x6CE8;&#x518C;&#x5230;&#x8DDF;&#x8282;&#x70B9;&#x4E0A;&#x3002;</p>
+<pre><code>bindEvent: function(events) {
+
+                events = events || this.get(&apos;events&apos;);
+                for (var selector in events) {
+                    var es = events[selector];
+                    for (var type in es) {
+
+                        var selector = parseSelector(selector, this);
+                        var event = parseSelector(type, this) + &apos;.events-&apos; + this.wId;
+                        (function(handler, self) {
+                            var callback = function(e) {
+                                if (isFunction(handler)) {
+                                    handler.call(self, e);
+                                } else {
+                                    self[handler](e);
+                                }
+                            }
+
+                            var element = self.get(&apos;el&apos;);
+                            if (selector === &quot;&quot;) {
+                                element.on(event, callback);
+                            }
+                            else if(selector === &quot;document&quot;){
+                                $(document).on(event, callback);
+                            }
+                            else if(selector === &quot;window&quot;){
+                                $(window).on(event, callback);
+                            }
+                            else {
+                                element.on(event, selector, callback);
+                            }
+
+                        })(es[type], this);
+                    }
+                }
+                return this;
+            },
+</code></pre><p>&#x56E0;&#x4E3A;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#xFF0C;&#x7ED1;&#x5B9A;&#x51FD;&#x6570;&#x65F6;&#x9700;&#x8981;&#x683C;&#x5F0F;&#x5316;selector&#x3002;&#x4FDD;&#x8BC1;selector&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;</p>
+<pre><code>function parseSelector(selector, widget){
+
+            return selector.replace(/{([^}]+)}/g, function(m, name) {
+                var parts = name.split(&apos;.&apos;);
+                var point = widget, part;
+
+                while (part = parts.shift()) {
+                    if (point === widget.options) {
+                      point = widget.get(part);
+                    } else {
+                      point = point[part];
+                    }
+                }
+                if (isString(point)) {
+                    return point;
+                }
+                return &apos;&apos;;
+            });
+        };
+</code></pre><p>&#x95EE;&#x9898;&#x5C31;&#x5728;&#x8FD9;&#x91CC;&#x3002;&#x56E0;&#x4E3A;&#x4F20;&#x5165;&#x7684;titleSelector&#x4E0D;&#x662F;string&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x8FD4;&#x56DE;&quot; &quot;&#xFF0C;&#x8FD9;&#x6837;&#x89E6;&#x70B9;&#x65F6;&#x95F4;&#x5C31;&#x7ED1;&#x5B9A;&#x5728;&#x4E86;&#x6839;&#x8282;&#x70B9;tpl&#x4E0A;&#x3002;hover&#x80AF;&#x5B9A;&#x5C31;&#x5931;&#x6548;&#x4E86;&#x3002;</p>
+<p>&#x518D;&#x56DE;&#x5230;&#x6839;&#x8282;&#x70B9;tpl &#x4E0A;&#x6765;&#xFF0C;tab <code>_creat()</code> &#x51FD;&#x6570;&#x4E2D;&#x5BF9;&#x6240;&#x9700;&#x5143;&#x7D20;&#x96C6;&#x5408;&#x7684;&#x67E5;&#x627E;&#x5168;&#x662F;&#x57FA;&#x4E8E;&#x6839;&#x8282;&#x70B9;&#x7684;&#x3002;</p>
+<pre><code>var element     = this.get(&apos;el&apos;);
+this.titles     = element.find(this.get(&apos;titleSelector&apos;));
+this.boxes      = element.find(this.get(&apos;boxSelector&apos;));
+this.prevNode   = element.find(this.get(&apos;prev&apos;));
+this.nextNode   = element.find(this.get(&apos;next&apos;));
+</code></pre><p>&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5176;&#x5B9E;&#x4F20;jquery&#x5BF9;&#x8C61;&#x7684;&#x610F;&#x4E49;&#x4E5F;&#x5C31;&#x6CA1;&#x6709;&#x4E86;&#x3002;&#x8FD8;&#x662F;&#x8981;&#x4ED4;&#x7EC6;&#x770B;&#x6587;&#x6863;&#x624D;&#x884C;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x679C;boxSelector &#x4F20;&#x5165;jquery&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;<code>this.boxes     = element.find(this.get(&apos;boxSelector&apos;));</code>
+<code>this.get</code>&#x662F;attribute.js&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>get: function(key) {
+    var option = this.options[key] || {};
+    var val = option.value;
+    return option.getter ? option.getter.call(this, val, key) : val;
+},
+</code></pre><p>&#x5982;&#x6B64;&#x5C31;&#x8FD4;&#x56DE;val&#xFF0C;&#x5C31;&#x662F;&#x4F20;&#x5165;&#x7684;jquery&#x5BF9;&#x8C61;&#x4E86;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8FC7;&#x7A0B;&#x4E2D;&#x8FD8;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x9519;&#x8BEF;&#xFF0C;&#x5199;&#x4E86; <code>titleSelector&#xFF1A;&apos;.korea-imgtab .main&apos;</code> &#x8FD9;&#x6837;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x7684;&#x7ED1;&#x5B9A;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x5B9A;&#x662F;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x3002;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#xFF0C;selector&#x8981;&#x4E3A;&#x9009;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x7684;&#x9009;&#x62E9;&#x5668;&#x624D;&#x53EF;&#x4EE5;&#x3002;&#x5C0F;&#x9519;&#x8BEF;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x3002;</p>
+<h2 id="%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95">&#x5176;&#x4ED6;&#x7528;&#x6CD5;</h2>
+<p>&#x6587;&#x6863;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF1A;
+switch. beforeSwitch
+&#x7528;&#x6CD5;</p>
+<pre><code>tab.on(&apos;switch&apos;,function(o){
+            console.log(o.boxes.eq(o.index));
+})
+</code></pre><p>o.box&#x4E3A;&#x8F6E;&#x64AD;&#x96C6;&#x5408;&#xFF0C;o.index&#x4E3A;&#x5F53;&#x524D;&#x8F6E;&#x64AD;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x53EF;&#x4EE5;&#x5BF9;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x3002;
+&#x53E6;&#x5916;&#x8FD8;&#x6709;o.lastIndex , &#x4E0A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<h2 id="tab%E7%BB%84%E4%BB%B6%E7%9A%84%E7%9B%92%E5%AD%90%E7%94%A8%E6%B3%95">tab&#x7EC4;&#x4EF6;&#x7684;&#x76D2;&#x5B50;&#x7528;&#x6CD5;</h2>
+<pre><code> &lt;div class=&quot;design-tabs-01&quot; data-allo=&quot;Tabs&quot; data-allo-config=&apos;{&quot;titleSelector&quot;:&quot;.fx-tab-nav li&quot;,&quot;boxSelector&quot;:&quot;.fx-tab-pane&quot;,&quot;effect&quot;:&quot;fade&quot;,&quot;currentCls&quot;:&quot;active&quot;}&apos;&gt;
+ &lt;ul calss=&apos;list&apos;&gt;&lt;/ul&gt;
+ &lt;ul calss=&apos;dot&apos;&gt;&lt;/ul&gt;
+</code></pre><p>&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5199;js&#x3002;&#x975E;&#x5E38;&#x9002;&#x7528;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x4E0A;&#x5F15;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x8F6E;&#x64AD;&#x7EC4;&#x4EF6;&#x3002;
+&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#x6587;&#x6863;&#x5730;&#x5740;&#xFF1A;<a href="http://wd.alibaba-inc.com/doc/page/work/cbu-operation-tools/dcms/allo" target="_blank">&#x300A;&#x76D2;&#x5B50;allo JS &#x7EC4;&#x4EF6;&#x89C4;&#x8303;(&#x76D2;&#x5B50;&#x7EC4;&#x4EF6;&#x5185;&#x4E0D;&#x542B;script&#x6807;&#x7B7E;)&#x300B;</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../js/js_2.html" class="navigation navigation-prev " aria-label="Previous page: Promise对象学习"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../css/index.html" class="navigation navigation-next " aria-label="Next page: css"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
