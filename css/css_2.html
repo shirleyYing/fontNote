@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>搭建公共头尾方法 | 前端笔记</title>
+        <title>web高性能动画与页面渲染 | 前端笔记</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../tools/tools_1.html" />
+    <link rel="next" href="../node/index.html" />
     
     
-    <link rel="prev" href="../tools/index.html" />
+    <link rel="prev" href="../css/css_1.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Mon Aug 17 2015 11:22:02 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="2.2" data-basepath=".." data-revision="Fri Sep 04 2015 21:43:43 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -163,7 +163,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="css/css_2.html">
+        <li class="chapter active" data-level="2.2" data-path="css/css_2.html">
             
                 
                     <a href="../css/css_2.html">
@@ -235,7 +235,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="tools/tools_3.html">
+        <li class="chapter " data-level="4.1" data-path="tools/tools_3.html">
             
                 
                     <a href="../tools/tools_3.html">
@@ -390,105 +390,53 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E6%90%AD%E5%BB%BA%E5%85%AC%E7%94%A8%E5%A4%B4%E5%B0%BE%E6%96%B9%E6%B3%95">&#x642D;&#x5EFA;&#x516C;&#x7528;&#x5934;&#x5C3E;&#x65B9;&#x6CD5;</h1>
-<h2 id="%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D">&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;</h2>
+                        <h1 id="web%E9%AB%98%E6%80%A7%E8%83%BD%E5%8A%A8%E7%94%BB%E4%B8%8E%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93">web&#x9AD8;&#x6027;&#x80FD;&#x52A8;&#x753B;&#x4E0E;&#x9875;&#x9762;&#x6E32;&#x67D3;</h1>
+<p>&#x6628;&#x5929;&#x542C;&#x4E86;css&#x5927;&#x4F1A;&#xFF0C;&#x5176;&#x4E2D;&#x7F8E;&#x5973;&#x9EC4;&#x8587;&#x5206;&#x4EAB;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x52A8;&#x753B;&#x8D85;&#x7EA7;&#x8D5E;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x505A;&#x4E00;&#x4E2A;&#x603B;&#x7ED3;&#x3002;</p>
+<h3 id="%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B">&#x9875;&#x9762;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;</h3>
+<p>layout(&#x8BA1;&#x7B97;&#x8303;&#x56F4;)&#x2014;&#x2014;paint&#xFF08;&#x8BA1;&#x7B97;&#x5C55;&#x73B0;&#xFF09;&#x2014;&#x2014;composit&#xFF08;&#x5408;&#x6210;&#x4F4D;&#x56FE;&#xFF09;</p>
+<h3 id="fps">fps</h3>
+<p>&#x9875;&#x9762;&#x662F;&#x6BCF;&#x4E00;&#x5E27;&#x53D8;&#x5316;&#x90FD;&#x662F;&#x7CFB;&#x7EDF;&#x7ED8;&#x5236;&#x51FA;&#x6765;&#x7684;(GPU&#x6216;&#x8005;CPU)&#x3002;&#x4F46;&#x8FD9;&#x79CD;&#x7ED8;&#x5236;&#x53C8;&#x548C;PC&#x6E38;&#x620F;&#x7684;&#x7ED8;&#x5236;&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x7684;&#x6700;&#x9AD8;&#x7ED8;&#x5236;&#x9891;&#x7387;&#x53D7;&#x9650;&#x4E8E;&#x663E;&#x793A;&#x5668;&#x7684;&#x5237;&#x65B0;&#x9891;&#x7387;(&#x800C;&#x975E;&#x663E;&#x5361;)&#xFF0C;&#x6240;&#x4EE5;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x6700;&#x9AD8;&#x7684;&#x7ED8;&#x5236;&#x9891;&#x7387;&#x53EA;&#x80FD;&#x662F;&#x6BCF;&#x79D2;60&#x5E27;(frame per second&#xFF0C;&#x4EE5;&#x4E0B;&#x7528;fps&#x7B80;&#x79F0;)&#xFF0C;&#x5BF9;&#x5E94;&#x4E8E;&#x663E;&#x793A;&#x5668;&#x7684;60Hz&#x3002;&#x4EBA;&#x773C;&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x5361;&#x987F;&#x5728;fps30 &#x4EE5;&#x4E0B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x4E00;&#x5E27;&#x52A8;&#x753B;&#x81F3;&#x5C11;&#x8981;&#x5728;33.4ms&#x5185;&#x5B8C;&#x6210;&#xFF0C;&#x624D;&#x4F1A;&#x6709;&#x6D41;&#x7545;&#x7684;&#x52A8;&#x753B;&#x4F53;&#x9A8C;&#x3002;chorme&#x6D4F;&#x89C8;&#x5668;&#x7684;devtool&#x4E2D;&#x7684;render&#x548C;timeline&#x5DE5;&#x5177;&#x90FD;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5206;&#x6790;fps&#x4EE5;&#x53CA;dom&#x6E32;&#x67D3;&#x65F6;&#x95F4;&#x3002;</p>
+<h3 id="%E5%87%8F%E5%B0%91%E8%A7%A6%E5%8F%91layout">&#x51CF;&#x5C11;&#x89E6;&#x53D1;layout</h3>
+<h4 id="%E5%87%8F%E5%B0%91%E5%AF%B9%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7%E7%9A%84%E8%AF%BB%E5%8F%96%E5%92%8C%E6%93%8D%E4%BD%9C">&#x51CF;&#x5C11;&#x5BF9;&#x76F8;&#x5173;&#x5C5E;&#x6027;&#x7684;&#x8BFB;&#x53D6;&#x548C;&#x64CD;&#x4F5C;</h4>
+<p>&#x6BCF;&#x5F53;&#x5BF9;&#x9875;&#x9762;&#x5143;&#x7D20;&#x7684;width&#xFF0C;height&#xFF0C;margin &#x4EE5;&#x53CA;&#x4F4D;&#x7F6E;&#x76F8;&#x5173;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x6216;&#x8005;&#x8BFB;&#x53D6;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x6D4F;&#x89C8;&#x5668;&#x7684;layout&#x884C;&#x4E3A;&#xFF0C;&#x8FDB;&#x800C;&#x4F1A;&#x5F15;&#x8D77;&#x540E;&#x7EED;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x884C;&#x4E3A;&#x3002;&#x5982;&#x679C;&#x9891;&#x7E41;&#x89E6;&#x53D1;&#x6D4F;&#x89C8;&#x5668;&#x7684;layout&#x884C;&#x4E3A;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x4E0D;&#x505C;&#x7684;&#x91CD;&#x7ED8;&#xFF0C;&#x975E;&#x5E38;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x3002;&#x53E6;&#x5916;box-shadow &#xFF0C;backgorund-attachment&#xFF0C; fix &#x7B49;&#x5C5E;&#x6027;&#xFF0C;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x9875;&#x9762;&#x4E0D;&#x505C;&#x7684;&#x91CD;&#x7ED8;&#xFF0C;&#x4F7F;&#x5F97;&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;&#x9875;&#x9762;&#x7684;&#x65F6;&#x95F4;&#x52A0;&#x957F;&#x3002;</p>
+<h4 id="%E4%BC%98%E5%8C%96layout%E8%A7%A6%E5%8F%91%E6%AC%A1%E6%95%B0">&#x4F18;&#x5316;layout&#x89E6;&#x53D1;&#x6B21;&#x6570;</h4>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4F18;&#x5316;&#x65B9;&#x6848;&#xFF0C;&#x6240;&#x6709;&#x53EF;&#x89E6;&#x53D1;layout&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x88AB;&#x6682;&#x65F6;&#x653E;&#x5165; layout-queue &#x4E2D;&#xFF0C;&#x7B49;&#x5230;&#x5FC5;&#x987B;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x8BA1;&#x7B97;&#x6574;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x5F71;&#x54CD;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x6267;&#x884C;&#x6240;&#x6709;layout&#x7684;&#x64CD;&#x4F5C;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDE;&#x7EED;&#x7684;&#x8BFB;&#x53D6; offsetWidth/Height &#x5C5E;&#x6027;&#x4E0E;&#x8FDE;&#x7EED;&#x7684;&#x8BBE;&#x7F6E; width/height &#x5C5E;&#x6027;&#xFF0C;&#x76F8;&#x6BD4;&#x5206;&#x522B;&#x8BFB;&#x53D6;&#x8BBE;&#x7F6E;&#x5355;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x5C11;&#x89E6;&#x53D1;&#x4E00;&#x6B21;layout&#x3002;
+&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8BFB;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x7684;&#x64CD;&#x4F5C;&#x653E;&#x5230;<code>requestAnimFrame</code>&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x6765;&#x51CF;&#x5C11;layout&#x89E6;&#x53D1;&#x6B21;&#x6570;&#x3002;</p>
+<h3 id="settimeout-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88">setTimeout &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;</h3>
+<p>setTimeout&#x6839;&#x636E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5185;&#x7F6E;&#x65F6;&#x949F;&#x66F4;&#x65B0;&#x9891;&#x7387;&#x3002;&#x4F8B;&#x5982;&#xFF0C;ie8 &#x4EE5;&#x524D;&#x7684;&#x66F4;&#x65B0;&#x95F4;&#x9694;&#x4E3A;15.6ms&#xFF0C;setTimeout&#x4E3A;16.7ms&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x624D;&#x80FD;&#x89E6;&#x53D1;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;js&#x5F15;&#x64CE;&#x4E3A;&#x5355;&#x7EBF;&#x7A0B;&#xFF0C;setTimeout&#x53EF;&#x80FD;&#x4F1A;&#x906D;&#x9047;&#x963B;&#x585E;&#x800C;&#x5BFC;&#x81F4;&#x51CF;&#x5C11;&#x6267;&#x884C;&#x6B21;&#x6570;&#xFF0C;&#x800C;&#x5F15;&#x8D77;&#x7684;&#x8DF3;&#x5E27;&#x3002;&#x4ECE;&#x800C;&#x9875;&#x9762;&#x52A8;&#x753B;&#x4F1A;&#x51FA;&#x73B0;&#x95EA;&#x70C1;&#x548C;&#x5361;&#x987F;&#x7684;&#x73B0;&#x8C61;&#x3002;</p>
+<p>&#x7528;<code>requestAnimFrame (callback)</code>&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x89E3;&#x51B3;&#x4EE5;&#x4E0A;&#x95EE;&#x9898;&#x3002;
+&#x8BE5;&#x65B9;&#x6CD5;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x4F18;&#x5316;&#x5E76;&#x884C;&#x7684;&#x52A8;&#x753B;&#x52A8;&#x4F5C;&#xFF0C;&#x66F4;&#x5408;&#x7406;&#x7684;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x52A8;&#x4F5C;&#x5E8F;&#x5217;&#xFF0C;&#x5E76;&#x628A;&#x80FD;&#x591F;&#x5408;&#x5E76;&#x7684;&#x52A8;&#x4F5C;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x5468;&#x671F;&#x5185;&#x5B8C;&#x6210;&#xFF0C;&#x51CF;&#x5C11;&#x89E6;&#x53D1;layout&#xFF0C;&#x4ECE;&#x800C;&#x5448;&#x73B0;&#x51FA;&#x66F4;&#x6D41;&#x7545;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#x3002;</p>
+<h3 id="%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F">&#x786C;&#x4EF6;&#x52A0;&#x901F;</h3>
+<p>GPU&#x64C5;&#x957F;&#x8FDB;&#x884C;&#x504F;&#x79FB;&#xFF0C;&#x7F29;&#x653E;&#xFF0C;&#x65CB;&#x8F6C;&#xFF0C;&#x66F4;&#x6539;&#x900F;&#x660E;&#x7684;&#x64CD;&#x4F5C;&#x3002;
+&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x6839;&#x636E;css&#x5C5E;&#x6027;&#x751F;&#x6210;layer&#xFF08;&#x56FE;&#x5C42;&#xFF09;,&#x5C06;layer&#x4F5C;&#x4E3A;texture&#x4E0A;&#x4F20;&#x7ED9;GPU&#xFF0C;&#x5F53;&#x6539;&#x53D8;layers&#x7684;&#x4E0A;&#x8FF0;&#x4E2D;&#x5C5E;&#x6027;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x8DF3;&#x8FC7;layout &#x548C;paint &#xFF0C;&#x8FDB;&#x5165;composite&#x9636;&#x6BB5;&#xFF0C;&#x76F4;&#x63A5;&#x544A;&#x8BC9;GPU&#x4FEE;&#x6539;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x8282;&#x7701;&#x4E86;&#x6D4F;&#x89C8;&#x5668;layout &#x548C;repaint &#x7684;&#x65F6;&#x95F4;&#x548C;&#x5C06;&#x751F;&#x6210;&#x7684;&#x4F4D;&#x56FE;&#x4E0A;&#x4F20;&#x5230;GPU&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x751F;&#x6210;layer&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x6709;</p>
+<pre><code>  3D&#x6216;transform&#x5C5E;&#x6027;
+  &#x4F7F;&#x7528;transition&#x6216;animation&#x5C5E;&#x6027;&#x6539;&#x53D8; opacity&#xFF0C;transform
+  video
+  canvas
+  css filter
+</code></pre><h4 id="%E4%BD%BF%E7%94%A8%EF%BC%9A">&#x4F7F;&#x7528;&#xFF1A;</h4>
 <ol>
-<li>&#x533A;&#x5757;&#xFF1A;&#x6700;&#x57FA;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x3002;&#x5BF9;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x7684;&#x4E00;&#x79CD;&#x5C01;&#x88C5;&#xFF0C;&#x63D0;&#x9AD8;&#x590D;&#x7528;&#x6027;&#x3002;</li>
-<li>&#x9759;&#x6001;&#x9875;&#x9762;&#xFF1A;cms&#x9875;&#x9762;&#xFF08;&#x76D2;&#x5B50;&#x9875;&#x9762;&#xFF0C;&#x6E90;&#x4EE3;&#x7801;&#x9875;&#x9762;&#xFF09;&#x3002;&#x9875;&#x9762;&#x7F16;&#x8BD1;&#x53EA;&#x5728;&#x70B9;&#x51FB;&#x53D1;&#x5E03;&#x65F6;&#x53D1;&#x751F;&#xFF0C;&#x9875;&#x9762;&#x4E0A;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x4FEE;&#x6539;&#xFF0C;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x53D1;&#x5E03;&#x9875;&#x9762;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x751F;&#x6548;&#x3002;&#x9759;&#x6001;&#x9875;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x5305;&#x62EC;&#x5934;&#x5C3E;&#xFF0C;&#x5934;&#x5C3E;&#x5728;&#x9875;&#x9762;&#x5C5E;&#x6027;&#x4E2D;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x3002;</li>
-<li>&#x52A8;&#x6001;&#x9875;&#x9762;&#xFF1A;&#x7531;&#x540E;&#x7AEF;&#x6839;&#x636E;&#x6570;&#x636E;&#x751F;&#x6210;&#x7684;&#x9875;&#x9762;&#x3002;</li>
-<li>extenal&#x9875;&#x9762;&#xFF1A;&#x540E;&#x7AEF;&#x8C03;&#x7528;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x4E00;&#x4E2A;extenal&#x9875;&#x9762;&#x53EA;&#x80FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;app&#x3002;</li>
-<li>ESI&#x533A;&#x5757;&#xFF1A;&#x5F15;&#x7528;&#x65B9;&#x5F0F;&#x4E3A;ESI&#x5F15;&#x7528;&#x7684;&#x533A;&#x5757;&#xFF0C;&#x9009;&#x62E9;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x65B9;&#x5F0F;&#x7684;&#x533A;&#x5757;&#x7684;&#x7279;&#x70B9;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x533A;&#x5757;&#x6709;&#x6539;&#x52A8;&#xFF0C;&#x6240;&#x6709;&#x5305;&#x542B;&#x8BE5;&#x533A;&#x5757;&#x7684;<strong>&#x9759;&#x6001;&#x9875;&#x9762;</strong>&#xFF08;&#x53EA;&#x6709;&#x9759;&#x6001;&#x9875;&#x9762;&#xFF09;&#x4EE5;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x8BE5;&#x533A;&#x5757;&#x5185;&#x5BB9;&#xFF0C;&#x4E0D;&#x7528;&#x91CD;&#x65B0;&#x53D1;&#x5E03;&#x9875;&#x9762;&#x6765;&#x8FBE;&#x5230;&#x66F4;&#x65B0;&#x533A;&#x5757;&#x5185;&#x5BB9;&#x7684;&#x6548;&#x679C;&#x3002;</li>
+<li><p><code>transform:transition3d(0,0,0)</code> &#x5229;&#x7528;3D&#x5C5E;&#x6027;&#x7ED9;&#x9700;&#x8981;&#x7684;&#x5143;&#x7D20;&#x5F00;&#x542F;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x3002;</p>
+</li>
+<li><p><code>will-change</code>&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x901A;&#x77E5;&#x6D4F;&#x89C8;&#x5668;&#x5173;&#x6CE8;&#x7279;&#x6027;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4EE5;&#x53CA;&#x76F8;&#x5E94;&#x7684;&#x4F18;&#x5316;&#x548C;&#x5206;&#x914D;&#x5185;&#x5B58;&#x3002;&#x5F00;&#x542F;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x3002;&#x4F46;&#x662F;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x5C5E;&#x6027;&#xFF0C;&#x652F;&#x6301;&#x7A0B;&#x5EA6;&#x6709;&#x9650;&#x3002;ie&#x5C31;&#x4E0D;&#x8981;&#x5962;&#x671B;&#x4E86;&#x3002;&#x53EF;&#x4EE5;&#x53C2;&#x7167; <a href="www.caniuse.com">caniuse</a> &#x3002;&#x800C;&#x4E14;&#x8BE5;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x4E0D;&#x597D;&#x4E5F;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x5360;&#x7528;&#x8FC7;&#x591A;&#x5185;&#x5B58;&#x7684;&#x60C5;&#x51B5;&#x3002;
+GPU&#x4E5F;&#x662F;&#x6709;&#x5BB9;&#x91CF;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x5F00;&#x542F;&#x786C;&#x4EF6;&#x52A0;&#x901F;&#xFF0C;&#x8D85;&#x8FC7;&#x5BB9;&#x91CF;&#x5C31;&#x6CA1;&#x6709;&#x52A0;&#x901F;&#x7684;&#x6548;&#x679C;&#x4E86;&#x3002;&#x800C;&#x4E14;&#x4E5F;&#x4F1A;&#x5E26;&#x6765;&#x5360;&#x7528;&#x8FC7;&#x591A;cpu&#x8D44;&#x6E90;&#x7B49;&#x5176;&#x4ED6;&#x95EE;&#x9898;&#x3002;</p>
+</li>
 </ol>
+<h4 id="%E7%A1%AC%E4%BB%B6%E5%8A%A0%E9%80%9F%E9%80%82%E7%94%A8%E6%83%85%E5%86%B5">&#x786C;&#x4EF6;&#x52A0;&#x901F;&#x9002;&#x7528;&#x60C5;&#x51B5;</h4>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5F88;&#x591A;&#x5927;&#x5C3A;&#x5BF8;&#x56FE;&#x7247;(&#x5C24;&#x5176;&#x662F;PNG24&#x56FE;)&#x8FDB;&#x884C;&#x52A8;&#x753B;&#x7684;&#x9875;&#x9762;&#x3002;</li>
+<li>&#x9875;&#x9762;&#x6709;&#x5F88;&#x591A;&#x5927;&#x5C3A;&#x5BF8;&#x56FE;&#x7247;&#x5E76;&#x4E14;&#x8FDB;&#x884C;&#x4E86;css&#x7F29;&#x653E;&#x5904;&#x7406;&#xFF0C;&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x6EDA;&#x52A8;&#x65F6;&#x3002;</li>
+<li>&#x4F7F;&#x7528;background-size:cover&#x8BBE;&#x7F6E;&#x5927;&#x5C3A;&#x5BF8;&#x80CC;&#x666F;&#x56FE;&#xFF0C;&#x5E76;&#x4E14;&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x6EDA;&#x52A8;&#x65F6;&#x3002;(&#x8BE6;&#x89C1;:<a href="https://coderwall.com/p/j5udlw" target="_blank">https://coderwall.com/p/j5udlw</a>)</li>
+<li>&#x7F16;&#x5199;&#x5927;&#x91CF;DOM&#x5143;&#x7D20;&#x8FDB;&#x884C;CSS3&#x52A8;&#x753B;&#x65F6;(transition/transform/keyframes/absTop&amp;Left)</li>
+</ul>
 <blockquote>
-<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x5B58;&#x5728;extenal&#x9875;&#x9762;&#xFF1F;</strong></p>
-<p>&#x52A8;&#x6001;&#x9875;&#x9762;&#x7531;java&#x751F;&#x6210;&#xFF0C;&#x4F46;&#x662F;&#x9875;&#x9762;&#x7684;&#x5934;&#x5C3E;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x3002;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x540E;&#x7AEF;&#x7528;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x3002;&#x5E76;&#x4E14;&#x5934;&#x5C3E;&#x4EE3;&#x7801;&#x662F;&#x7531;&#x524D;&#x7AEF;&#x540C;&#x5B66;&#x5B8C;&#x6210;&#xFF0C;&#x540E;&#x7AEF;&#x76F4;&#x63A5;&#x5B58;&#x50A8;&#x4EE3;&#x7801;&#x6BB5;&#x7684;&#x8BDD;&#xFF0C;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#xFF0C;&#x540E;&#x7AEF;&#x4E0D;&#x597D;&#x7EF4;&#x62A4;&#x3002;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5BF9;&#x533A;&#x5757;&#x8FDB;&#x884C;&#x5305;&#x88C5;&#xFF0C;&#x5305;&#x88C5;&#x65B9;&#x5F0F;&#x5C31;&#x662F;extenal&#x9875;&#x9762;&#x3002;&#x5982;&#x679C;&#x65B0;&#x5EFA;extenal&#x9875;&#x9762;&#x65F6;&#x9009;&#x62E9;&#x4E86;&#x201D;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x201C;&#xFF0C;extenal&#x9875;&#x9762;&#x4F1A;&#x6309;&#x7167;velocity&#x8BED;&#x6CD5;&#x5C06;&#x5185;&#x5BB9;&#x7F16;&#x8BD1;&#x4E00;&#x904D;&#x3002;&#x540E;&#x7AEF;&#x8C03;&#x7528;extenal&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x4F1A;&#x518D;&#x6B21;&#x7F16;&#x8BD1;&#xFF0C;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x5934;&#x5C3E;&#x3002;&#x8FD9;&#x6837;&#x4E5F;&#x7ED9;&#x540E;&#x7AEF;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E86;&#x673A;&#x4F1A;&#x3002;</p>
+<p>&#x6709;&#x4E9B;&#x5730;&#x65B9;&#x7406;&#x89E3;&#x7684;&#x8FD8;&#x4E0D;&#x662F;&#x5F88;&#x5230;&#x4F4D;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9519;&#x8BEF;&#x6B22;&#x8FCE;&#x6307;&#x6B63;&#x3002;
+dfdf
+dfdfgg&#x98CE;&#x683C;&#x53CD;&#x9988;&#x7ED3;&#x679C;</p>
 </blockquote>
-<hr>
-<blockquote>
-<p><strong>&#x9759;&#x6001;&#x9875;&#x9762;&#x6570;&#x636E;&#x6253;&#x70B9;&#x95EE;&#x9898;</strong></p>
-<p>&#x9759;&#x6001;&#x9875;&#x9762;&#x53EA;&#x80FD;&#x5BF9;&#x5185;&#x5BB9;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6253;&#x70B9;&#x3002;&#x5934;&#x5C3E;&#x4E0D;&#x5305;&#x62EC;&#x5728;&#x5185;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5BF9;&#x5934;&#x5C3E;&#x8FDB;&#x884C;&#x6253;&#x70B9;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5934;&#x5C3E;&#x505A;&#x6210;&#x7EC4;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;&#x9875;&#x9762;&#x4E2D;&#x3002;</p>
-</blockquote>
-<h2 id="%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB">&#x5173;&#x8054;&#x5173;&#x7CFB;</h2>
-<p><img src="../../images/tool_3_related.jpg" alt="Alt text"></p>
-<p>&#x9996;&#x5148;&#x7F16;&#x5199;&#x5934;&#x5C3E;&#x533A;&#x5757;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x548C;&#x9002;&#x5408;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x7ED9;&#x533A;&#x5757;&#x7A7F;&#x4E86;&#x4E09;&#x4EF6;&#x4E0D;&#x540C;&#x5916;&#x8863;&#x3002;</p>
-<ol>
-<li>&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x4F7F;&#x9759;&#x6001;&#x9875;&#x9762;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x8BE5;&#x533A;&#x5757;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x533A;&#x5757;&#x5305;&#x5728;ESI &#x533A;&#x5757;&#x4E2D;&#x3002;</li>
-<li>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x9759;&#x6001;&#x9875;&#x9762;&#x53EA;&#x652F;&#x6301;&#x5BF9;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6253;&#x70B9;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5C06;&#x5934;&#x5C3E;&#x533A;&#x5757;&#x5305;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002;</li>
-<li>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x52A8;&#x6001;&#x9875;&#x9762;&#x9700;&#x8981;&#x5934;&#x5C3E;&#x4EE3;&#x7801;&#x95EE;&#x9898;&#xFF0C;&#x5C06;&#x533A;&#x5757;&#x5305;&#x5728;extenal&#x9875;&#x9762;&#x4E2D;&#x4F9B;&#x52A8;&#x6001;&#x9875;&#x9762;&#x4F7F;&#x7528;&#x3002;</li>
-</ol>
-<h2 id="%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA">&#x5982;&#x4F55;&#x642D;&#x5EFA;</h2>
-<p>&#x4EE5;&#x91C7;&#x8D2D;&#x5546;&#x57CE;&#x9996;&#x9875;&#x516C;&#x5171;&#x5934;&#x90E8;&#x4E3A;&#x4F8B;&#x3002;</p>
-<h3 id="%E4%BE%9B%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E4%BD%BF%E7%94%A8">&#x4F9B;&#x9759;&#x6001;&#x9875;&#x9762;&#x4F7F;&#x7528;</h3>
-<ol>
-<li>&#x7F16;&#x5199;&#x5934;&#x90E8;&#x533A;&#x5757;&#x5185;&#x5BB9;&#xFF0C;caigou_header.</li>
-<li>&#x5728;&#x65E7;&#x7C7B;&#x76EE;&#x7AD9;&#x70B9;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#xFF0C;masthead_caigou_v6_esi&#x3002;&#x5728;&#x8BE5;&#x533A;&#x5757;&#x4E2D;&#x5F15;&#x5165;caigou_header&#x3002;&#x9875;&#x9762;&#x5C5E;&#x6027;&#x4E2D;&#x4F9B;&#x9009;&#x62E9;&#x7684;&#x516C;&#x5171;&#x5934;&#x5C3E;&#x53EA;&#x663E;&#x793A;&#x65E7;&#x7C7B;&#x76EE;&#x7AD9;&#x70B9;&#x4E0B;&#x7684;&#x533A;&#x5757;&#x3002;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5EFA;&#x5728;&#x65E7;&#x7C7B;&#x76EE;&#x7AD9;&#x70B9;&#x4E0B;&#x3002;
-&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
-</ol>
-<pre><code class="lang-javascript">#set($caigou_header_useinapp=<span class="hljs-literal">false</span>)
-#set($caigou_header_alibar=<span class="hljs-literal">true</span>)
-#set($caigou_header_notice=<span class="hljs-literal">true</span>)
-#set($caigou_header_help=<span class="hljs-literal">true</span>)
-#set($caigou_header_search=<span class="hljs-literal">true</span>)
-#set($caigou_header_nav=<span class="hljs-literal">true</span>)
-#set($caigou_header_nav_selfopen=<span class="hljs-literal">false</span>)
-
-##set the param below <span class="hljs-keyword">in</span> app to add a title
-##set($caigou_header_title=<span class="hljs-string">&quot;&quot;</span>)
-
-#parse(<span class="hljs-string">&quot;caigou_header&quot;</span>)
-</code></pre>
-<p>3.&#x82E5;&#x6709;&#x5BF9;&#x5934;&#x90E8;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6253;&#x70B9;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x65B0;&#x5EFA;&#x5934;&#x90E8;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EA;&#x5C55;&#x793A;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x3002;</p>
-<pre><code class="lang-javascript">&lt;script type=<span class="hljs-string">&quot;text/dcms-param&quot;</span>&gt;
-@param({
-   &#xB7;&#xB7;&#xB7;
-});
-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-
-
-#set($caigou_header_useinapp = false)
-#set($caigou_header_notice = true)
-#set($caigou_header_alibar = ($headerAlibar.value.value == &quot;1&quot;))
-#set($caigou_header_help = ($headerHelp.value.value == &quot;1&quot;))
-#set($caigou_header_search = ($headerSearch.value.value == &quot;1&quot;))
-#set($caigou_header_cart = ($headerCart.value.value == &quot;1&quot;))
-#set($caigou_header_nav = ($headerNav.value.value == &quot;1&quot;))
-#set($caigou_header_nav_expand = ($headerNavExpand.value.value == &quot;1&quot;))
-
-#set($caigou_header_nav_current = $headerNavCurrent.value)
-#set($caigou_header_title = $headerTitle.value)
-
-#parse(&quot;caigou_header&quot;)
-</span></code></pre>
-<h3 id="%E4%BE%9B%E5%90%8E%E7%AB%AF%E4%BD%BF%E7%94%A8">&#x4F9B;&#x540E;&#x7AEF;&#x4F7F;&#x7528;</h3>
-<p>&#x65B0;&#x5EFA;extenal&#x9875;&#x9762;&#x3002;caigou_header_rate&#x3002;
-caigou_header_rate&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-javascript">#set($caigou_header_useinapp=<span class="hljs-literal">true</span>)
-#set($caigou_header_alibar=<span class="hljs-literal">false</span>)
-#set($caigou_header_search=<span class="hljs-literal">false</span>)
-#set($caigou_header_nav=<span class="hljs-literal">false</span>)
-
-##set the param below <span class="hljs-keyword">in</span> app to add a title
-##set($caigou_header_title=<span class="hljs-string">&quot;&quot;</span>)
-
-#parse(<span class="hljs-string">&quot;caigou_header&quot;</span>)
-</code></pre>
-<p>&#x8BE5;extenal&#x9875;&#x9762;&#x4E2D;&#x9700;&#x8981;&#x540E;&#x7AEF;&#x63A7;&#x5236;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x533A;&#x5757;caigou_header&#x6DFB;&#x52A0;&#x4E86;&#x5F00;&#x5173;&#x63A7;&#x5236;&#x3002;</p>
-<pre><code class="lang-javascript"> #if($caigou_header_useinapp)
-            \#if($caigou_header_title &amp;&amp; $caigou_header_title != &quot;&quot;)
-            &lt;h1&gt;$caigou_header_title&lt;/h1&gt;
-            \#else
-            &lt;img class=&quot;ali-market-img&quot; width=&quot;185&quot; height=&quot;18&quot; src=&quot;//cbu01.alicdn.com/cms/upload/2015/513/083/2380315_1173562213.png&quot; /&gt;
-            \#end
-#else
-</code></pre>
-<p><code>\#if</code> &#x7ECF;&#x8FC7;&#x7F16;&#x8BD1;&#x540E;&#x4F1A;&#x53D8;&#x4E3A;<code>#if</code>&#xFF0C;&#x4EE5;&#x4F9B;&#x540E;&#x7AEF;&#x62FF;&#x5230;&#x9875;&#x9762;&#x540E;&#x7EE7;&#x7EED;&#x7F16;&#x8BD1;&#x3002;</p>
-<h2 id="%E4%BF%AE%E6%94%B9%E5%8C%BA%E5%9D%97%E5%90%8E%E9%9C%80%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88">&#x4FEE;&#x6539;&#x533A;&#x5757;&#x540E;&#x9700;&#x8981;&#x505A;&#x4EC0;&#x4E48;</h2>
-<p>&#x533A;&#x5757;caigou_header &#x4FEE;&#x6539;&#x63D0;&#x4EA4;&#x540E;&#xFF0C;&#x9700;&#x8981;&#xFF1A;</p>
-<ol>
-<li>&#x53D1;&#x5E03;&#x6240;&#x6709;&#x5F15;&#x7528;&#x8BE5;&#x6A21;&#x5757;&#x7684;extenal&#x9875;&#x9762;</li>
-<li>&#x53D1;&#x5E03;&#x5F15;&#x5165;&#x8BE5;&#x533A;&#x5757;&#x7684;&#x7EC4;&#x4EF6;&#x6240;&#x5728;&#x9875;&#x9762;</li>
-<li>&#x53D1;&#x5E03;&#x5F15;&#x5165;&#x8BE5;&#x533A;&#x5757;&#x7684;ESI&#x533A;&#x5757;</li>
-</ol>
 
                     
                     </section>
@@ -499,10 +447,10 @@ caigou_header_rate&#x4EE3;&#x7801;&#xFF1A;</p>
         </div>
 
         
-        <a href="../tools/index.html" class="navigation navigation-prev " aria-label="Previous page: 工具类文档"><i class="fa fa-angle-left"></i></a>
+        <a href="../css/css_1.html" class="navigation navigation-prev " aria-label="Previous page: css布局思考与总结"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../tools/tools_1.html" class="navigation navigation-next " aria-label="Next page: 前端ps工具使用技巧"><i class="fa fa-angle-right"></i></a>
+        <a href="../node/index.html" class="navigation navigation-next " aria-label="Next page: node"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
