@@ -12,7 +12,7 @@ var promise = new Promise(function(resolve, reject) {
 
 ##用法：
 
-```
+```javascript
 
 Function getPromise(){
     return new Promise(function(resolve,reject){

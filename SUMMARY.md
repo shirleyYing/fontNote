@@ -12,5 +12,5 @@ This is the summary of my book.
     * [搭建公共头尾方法](tools/tools_3.md)
 	* [前端ps工具使用技巧](tools/tools_1.md)
     * [sublime3+livereload+chrome插件安装](tools/tools_2.md)
-    * [test](tools/tools_4.md)
+   
 
