@@ -1,5 +1,5 @@
 .publish/
 .gulpfile.js
 *node_modules*
-*_book*
-book
+_book/
+bookend/
