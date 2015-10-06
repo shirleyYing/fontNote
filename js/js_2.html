@@ -5,11 +5,11 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Promise对象学习 | 前端笔记</title>
+        <title>Promise对象学习 | 前端开发笔记</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.4.3">
-        
+        <meta name="author" content="shirleyYing">
         
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-basepath=".." data-revision="Sun Oct 04 2015 19:50:11 GMT+0800 (中国标准时间)">
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Tue Oct 06 2015 10:22:38 GMT+0800 (中国标准时间)">
     
 
 <div class="book-summary">
@@ -52,8 +52,15 @@
             
             
             
+                
+                <li>
+                    <a href="http://github.com/shirleyYing" target="blank" class="custom-link">shirleyying&#39;s github</a>
+                </li>
+            
             
 
+            
+            <li class="divider"></li>
             
 
             
@@ -401,7 +408,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../" >前端笔记</a>
+        <a href="../" >前端开发笔记</a>
     </h1>
 </div>
 
@@ -418,25 +425,26 @@
 // &#x5904;&#x7406;&#x7ED3;&#x675F;&#x540E;&#x3001;&#x8C03;&#x7528;resolve &#x6216; reject
  });
 </code></pre><h2 id="%E7%94%A8%E6%B3%95%EF%BC%9A">&#x7528;&#x6CD5;&#xFF1A;</h2>
-<pre><code>
-Function getPromise(){
-    return new Promise(function(resolve,reject){
-        var str=&#x2018;new promise&#x2019;;
-console.log(str);
+<pre><code class="lang-javascript">
+<span class="hljs-built_in">Function</span> getPromise(){
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-keyword">var</span> str=&#x2018;<span class="hljs-keyword">new</span> promise&#x2019;;
+<span class="hljs-built_in">console</span>.log(str);
         resolve(str);
 }) ;
 }
-1 
-getPromise().then(function fulfilled (value){
-    console.log(value);   // --&gt; new promise
-}&#xFF0C;function onRejected(error){
+<span class="hljs-number">1</span> 
+getPromise().then(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fulfilled</span> (<span class="hljs-params">value</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(value);   <span class="hljs-comment">// --&gt; new promise</span>
+}&#xFF0C;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onRejected</span>(<span class="hljs-params">error</span>)</span>{
 });
-2
-getPromise().then(function(value){
-    console.log(value);   // --&gt; new promise
-}).catch(function(error){
+<span class="hljs-number">2</span>
+getPromise().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(value);   <span class="hljs-comment">// --&gt; new promise</span>
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>)</span>{
 })
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p><strong>1&#x548C;2&#x7684;&#x5199;&#x6CD5;&#x7B49;&#x4EF7;&#x3002;&#x4F46;2&#x7684;&#x5199;&#x6CD5;&#x66F4;&#x6E05;&#x695A;&#x4E00;&#x4E9B;&#x3002;</strong>
 &#x5F53;getPromise()&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x4E3A;resolve&#x7684;promise&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4F1A;&#x6267;&#x884C;then&#xFF08;&#xFF09;&#x4E2D;&#x7684;onfullfilled&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x662F;reject &#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;onRecjected &#x51FD;&#x6570;&#xFF08;&#x6216;&#x8005;&#x662F;catch&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;&#xFF09;
 2&#x5199;&#x6CD5;&#x7684;&#x6709;&#x4E00;&#x70B9;&#x597D;&#x5904;&#x662F;&#xFF0C;then() &#x6267;&#x884C;&#x8FC7;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;promise &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5982;&#x679C;then&#x51FD;&#x6570;&#x4F53;&#x4E2D;&#x629B;&#x51FA;error&#x9519;&#x8BEF;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5230;&#x540E;&#x9762;&#x7684;catch&#xFF08;&#xFF09;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x3002;
@@ -536,12 +544,16 @@ getURL(URL).then(function onFulfilled(value){
 <script src="../gitbook/app.js"></script>
 
     
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
     <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"disqus":{"shortName":"shirleyying"}};
     gitbook.start(config);
 });
 </script>
