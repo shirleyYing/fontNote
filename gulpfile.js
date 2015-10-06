@@ -2,7 +2,7 @@ var gulp = require("gulp"),
     deploy = require("gulp-gh-pages");
 
 gulp.task('publish', function () {
-  gulp.src("bookend/**/*")
+  gulp.src("node/_book/css/**/*")
     .pipe(deploy({
       remoteUrl: "git@github.com:shirleyYing/fontNote.git"
     }))
